@@ -1,0 +1,6 @@
+# Plain static site (no Hugo or other generator).
+# The build copies only the public files into dist/, so Code.gs
+# (the Google Apps Script backend) and the README are not published.
+[build]
+  command = "rm -rf dist && mkdir -p dist && cp index.html 404.html config.json robots.txt dist/"
+  publish = "dist"
